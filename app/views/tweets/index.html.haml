@@ -1,0 +1,30 @@
+.contents
+  .content
+    - @tweets.each do |tweet|
+      .content__box
+        .content__box__left
+          .content__box__left__place
+            = tweet.place
+          .content__box__left__image
+            = image_tag tweet.image.url, class: 'img' if tweet.image.present? 
+        .content__box__right
+          .content__box__right__info
+            = link_to  "/tweets/#{tweet.id}", method: :get, class: "icon" do
+              = icon("fa","crosshairs",class: "btn__icon")
+              %span<>
+                詳細
+            = link_to  "/tweets/#{tweet.id}/edit", method: :get, class: "icon" do
+              = icon("fa","edit",class: "btn__icon")
+              %span<>
+                編集
+            = link_to  "/tweets/#{tweet.id}", method: :delete, class: "icon" do
+              = icon("fa","trash",class: "btn__icon")
+              %span<>
+                削除
+          .content__box__right__top      
+            .content__box__right__top__root
+              = tweet.way
+            .content__box__right__top__day
+              = tweet.day
+          .content__box__right__text
+            = simple_format(tweet.impression)

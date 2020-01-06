@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Hotspring
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    .header
+      .header__main
+        .header__main__title
+          = link_to "HotSpring" , "/", class: "deco"
+        .header__main__info
+          .header__main__info__left
+            = link_to "投稿する" , "/tweets/new", class: "deco"
+          .header__main__info__right
+            = link_to "ログイン" , "#", class: "deco"
+    = yield

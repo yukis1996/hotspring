@@ -1,0 +1,215 @@
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  height: 100px;
+  width: 100%;
+  padding: 20px;
+  background-color: orange;
+  &__main {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    &__title {
+      width: 40%;
+      text-align: center;
+      font-size: 40px;
+      font-weight: bold;
+      font-style: oblique;
+    }
+    &__info {
+      height: 60px;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      &__left {
+        width: 120px;
+        line-height: 60px;
+        text-align: center;
+        border: solid 1px;
+        margin-left: 70px;
+      }
+      &__right {
+        width: 120px;
+        line-height: 60px;
+        text-align: center;
+        border: solid 1px;
+        margin-left: 70px;
+      }
+    }
+  }
+}
+
+.contents {
+  background-color: lightblue;
+  height: calc(100vh - 100px);
+  width: 100%;
+  display: flex;
+  .content {
+    height: 100%;
+    width: 100%;
+    margin: 0 50px;
+    background-color: lightslategray;
+    &__box {
+      height: 400px;
+      padding: 10px;
+      background-color: lime;
+      margin: 0 0 40px 0;
+      display: flex;
+      &__left {
+        height: 100%;
+        width: 50%;
+        background-color: maroon;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &__place {
+          height: 20%;
+          line-height: 66px;
+          text-align: center;
+          font-size: 40px;
+          background-color: mintcream;
+        }
+        &__image {
+          height: 75%;
+          position: relative;
+          img {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: auto;
+            width: auto;
+            max-width: 100%;
+            max-height: 100%;
+            margin: auto;
+          }
+        }
+      }
+      &__right {
+        height: 100%;
+        width: 50%;
+        background-color: mediumslateblue;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &__info {
+          height: 30px;
+          width: 100%;
+          text-align: right;
+        }
+        &__top {
+          margin: 10px 0;
+          height: 20%;
+          display: flex;
+          &__root {
+            text-align: center;
+            font-size: 25px;  
+            line-height: 70px;
+            width: 50%;
+          }
+          &__day {
+            text-align: center;
+            font-size: 25px;  
+            line-height: 70px;
+            width: 50%;
+          }
+        }
+        &__text {
+          height: 75%;
+        }
+      }
+    }
+  }
+}
+
+.posts {
+  background-color: lightblue;
+  height: calc(100vh - 100px);
+  width: 100%;
+  padding: 40px 50px 0 50px;
+  display: flex;
+  flex-direction: column;
+  &__info {
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .post {
+    height: 400px;
+    width: 100%;
+    padding: 10px;
+    background-color: lightgoldenrodyellow;
+    border: solid 1px;
+    &__left {
+      height: 100%;
+      width: 50%;
+      float: left;
+      &__place {
+        padding-right: 20px;
+      }
+      &__image {
+        margin-top: 50px;
+      }
+    }
+    &__right {
+      height: 100%;
+      width: 50%;
+      float: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      &__info {
+        padding: 15px 0;
+        display: flex;
+        &__day {
+          margin-left: 15px;
+        }
+      }
+      &__bottom {
+      }
+      .btn {
+        font-size: 30px;
+        width: 80px;
+      }
+    }
+  }
+}
+
+.deco {
+  text-decoration: none;
+}
+
+#tweet_image {
+  display: none;
+}
+
+h1 {
+  font-size: 30px;
+  text-align: center;
+  line-height: 60px;
+}
+
+#tweet_place {
+  height: 70px;
+  width: 100%;
+}
+
+.image__label {
+  margin-top: 30px;
+  font-size: 30px;
+}
+
+select {
+  height: 35px;
+}
+textarea {
+  width: 100%;
+  margin: 10px 0;
+}

@@ -1,0 +1,26 @@
+.posts
+  .posts__info
+    ♨︎投稿フォーム♨︎
+  .post
+    = form_with(model: @tweet, local: true) do |form|
+      .post__left
+        .post__left__place
+          = form.text_field :place, placeholder: "訪れた温泉"
+        .post__left__image
+          = form.label :image, class: 'image__label' do
+            = icon('fas', 'image', class: 'icon')
+            画像を選択
+            = icon('fas', 'image', class: 'icon')
+            = form.file_field :image, class: 'file'
+      .post__right
+        .post__right__info
+          .post__right__info__way
+            交通手段:
+            = form.select :way ,["車", "電車", "飛行機", "新幹線", "その他"]
+          .post__right__info__day
+            滞在日数:
+            = form.select :day ,["日帰り", "1泊2日", "2泊3日", "3泊以上"]
+        .post__right__impression
+          = form.text_area :impression, placeholder: "感想" , rows: "10"
+        .post__right__bottom
+          = form.submit "投稿する", class:"btn"
